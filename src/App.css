@@ -1,8 +1,12 @@
 .App {
   text-align: center;
-  background-color: #222;
 }
 
 .TituloApp {
+  color: #fff;
+  font-size: 50px;
+}
+
+.Loading {
   color: #fff;
 }
