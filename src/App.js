@@ -12,19 +12,35 @@ let fakeServerData = {
     playlists: [
       {
         name: 'My Favorites',
-        songs: ['Sin Pijama', 'Sirenas', 'Rewrite the stars']
+        songs: [
+          {name: 'Sin Pijama', duration: 1234},
+          {name: 'Sirenas', duration: 7865},
+          {name: 'Rewrite the stars', duration: 3456}
+        ]
       },
       {
         name: 'Rock Nacional',
-        songs: ['Tan Distintos', 'Señales', 'Creo']
+        songs: [
+          {name: 'Tan Distintos', duration: 3645}, 
+          {name: 'Señales', duration: 945},
+          {name: 'Creo', duration: 7623}
+        ]
       },
       {
         name: 'Reggae',
-        songs: ['Tu sin mi', 'Nada', 'Hoja en blanco']
+        songs: [
+          {name: 'Tu sin mi', duration: 2312},
+          {name: 'Nada', duration: 8563},
+          {name: 'Hoja en blanco', duration: 5876}
+        ]
       },
       {
         name: 'Baile',
-        songs: ['Clandestino', 'No es justo', 'Unica']
+        songs: [
+          {name: 'Clandestino', duration: 543},
+          {name: 'No es justo', duration: 9832},
+          {name: 'Unica', duration: 6754}
+        ]
       }
     ]
   }
@@ -51,7 +67,8 @@ class App extends Component {
           </h1>
           <PlaylistCounter 
             playlists={this.state.serverData.user.playlists}/>
-          <HoursCounter />
+          <HoursCounter 
+            playlists={this.state.serverData.user.playlists}/>
           <Filter />
           <Playlist />
           <Playlist />
