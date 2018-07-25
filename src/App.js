@@ -54,6 +54,7 @@ class App extends Component {
       filterString: ''
     }
   }
+  
   componentDidMount() {
     setTimeout(() => {
       this.setState({serverData: fakeServerData})
