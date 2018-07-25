@@ -70,10 +70,9 @@ class App extends Component {
           <HoursCounter 
             playlists={this.state.serverData.user.playlists}/>
           <Filter />
-          <Playlist />
-          <Playlist />
-          <Playlist />
-          <Playlist />
+          {this.state.serverData.user.playlists.map(playlist => 
+            <Playlist playlist={playlist}/>
+          )}
         </div> : <h1 className={classes.Loading}>Loading...</h1>
         }
       </div>
